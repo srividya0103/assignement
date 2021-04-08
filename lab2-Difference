@@ -1,0 +1,23 @@
+package lab.exercise;
+import java.util.Scanner;
+public class Difference {
+	public static int s1(int n) {
+		int sum = 0;
+		for(int i = 1; i <= n ; i++) {
+			sum += i*i;
+		}
+		return sum;
+	}
+	public static int s2(int n) {
+		int sum = (n*(n+1))/2;
+		return sum*sum;
+	}
+public static void main(String[] args) {
+	int n;
+	Scanner sc = new Scanner(System.in);
+	n = sc.nextInt();
+	int diff;
+	diff = s1(n)-s2(n);
+	System.out.println(diff);
+}
+}
