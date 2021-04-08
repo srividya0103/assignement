@@ -1,0 +1,60 @@
+package day3.task1;
+import java.util.Scanner;
+public class BankApp extends BankAccount {
+
+	public static void main(String[] args) {
+		
+		
+		/* business use case
+		 * -------------------
+		 * if balance is less than 10,000 :- account holder cannot withdrawal 
+		 * in such case account status should be inactive.
+		 *  
+		 * */
+		Scanner sc = new Scanner(System.in);
+		BankAccount b1 = new BankAccount();
+		System.out.println("Do You Want To Open A Bank Account");
+		System.out.println("Enter 1 to Open A Bank Account");
+		int f = sc.nextInt();
+		if(f == 1) {
+			System.out.println("Welcome to SS Bank, Your Bank Account is Opened");
+		}
+		while(true) {
+			System.out.println("1---- to Deposit\n 2---- withDraw \n 3------exit");
+			int choice = sc.nextInt();
+			switch(choice) {
+			case 1 :
+				System.out.println("Enter Amount to Deposit");
+				int am = sc.nextInt();
+				System.out.println("Your Current Balance is " +doDeposit(am));
+				
+				break;
+			case 2:
+				if(getBalance() <= 10000) {
+					System.out.println("You Cannot WithDraw Your Balance is Minimum"+getBalance());
+				}
+				else {
+					Syst  em.out.println("Enter the Amount to WithDraw");
+					int a = sc.nextInt();
+					if((getBalance()- a ) >= 10000) {
+						doWithdrawal(a);
+						System.out.println("Your Updated Balance is " + getBalance());
+					}
+					else {
+						System.out.println("You can only withdraw"+(getBalance()-10000));
+					}
+				}
+				break;
+			case 3:
+				System.exit(1);
+				break;
+			}
+			
+			
+		}
+		
+		
+	}
+
+	
+}
