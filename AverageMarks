@@ -1,0 +1,20 @@
+package day1.task1;
+import java.util.Scanner;
+
+public class AverageMarks {
+public static void main(String[] args) {
+	int englishMarks;
+	int java;
+	int db;
+	int springTools;
+	Scanner sc = new Scanner(System.in);
+	englishMarks = sc.nextInt();
+	java = sc.nextInt();
+	db = sc.nextInt();
+	springTools = sc.nextInt();
+	double total_marks =  englishMarks+ java+ db+ springTools;
+	double avg = total_marks/4;
+	System.out.println(total_marks);
+	System.out.println(avg);
+}
+}
