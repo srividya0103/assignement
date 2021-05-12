@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	 
+	 
+	 <bean id="student" class="com.college.beans.Student">
+	 	<constructor-arg value="101" name = "rollNumber"/>
+	 	<constructor-arg value="Vidya" name = "studentName"/>
+	 	<constructor-arg value="100" name = "marks"/>
+	 	
+	 </bean>
+	 <bean id = "student2" class = "com.college.beans.Student" autowire = "byType" scope = "singleton">
+	 <property name = "rollNumber" value = "102"></property>
+	 <property name = "studentName" value = "harshi"></property>
+	 <property name = "marks" value = "99"></property>
+	  
+	 </bean>
+	 
+	 
+	 <bean id = "ad" class = "com.college.beans.Address">
+	 <property name = "city" value = "Hyderabad"></property>
+	 <property name = "country" value = "India"></property>
+	
+	 </bean>
+	 
+	 <bean id = "co" class = "com.college.beans.Courses">
+	 <property name = "courseId" value = "1"></property>
+	 <property name = "faculty" value = "hinesh"></property>
+	 <property name = "hrs" value = "19"></property>
+	 </bean>
+	 
+	
+	 
+</beans>
+
