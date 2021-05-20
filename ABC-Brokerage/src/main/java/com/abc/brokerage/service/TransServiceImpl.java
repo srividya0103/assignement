@@ -52,11 +52,10 @@ public class TransServiceImpl implements TransService{
 		// TODO Auto-generated method stub
 		return repo.findAll();
 	}
-	
 
 
 
-	
+
 
 
 

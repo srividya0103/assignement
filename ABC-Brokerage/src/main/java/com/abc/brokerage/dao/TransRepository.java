@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.abc.brokerage.bean.Stock;
 import com.abc.brokerage.bean.Trans;
 
-public interface TransRepository extends JpaRepository<Trans, Integer>  {
+public interface TransRepository extends JpaRepository<Trans, Integer> , CustomTransRepository {
 
 }
 

@@ -12,4 +12,5 @@ public interface TransService {
 	
 	public Trans getTransById(int id);
 	
+	
 }
